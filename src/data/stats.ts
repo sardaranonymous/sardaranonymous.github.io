@@ -5,7 +5,7 @@ export const stats = [
   },
 
   {
-    number: "5+",
+    number: "6+",
     title: "Hall of Fame",
   },
 
@@ -15,7 +15,7 @@ export const stats = [
   },
 
   {
-    number: "200 CHF",
-    title: "Bug Bounty",
+    number: "400$",
+    title: "Highest Signle Bounty",
   },
 ];
