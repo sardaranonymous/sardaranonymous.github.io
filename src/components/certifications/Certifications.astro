@@ -1,0 +1,43 @@
+```astro
+---
+import { certifications } from "../../data/certifications";
+import CertificationCard from "./CertificationCard.astro";
+---
+
+<section
+  id="certifications"
+  class="py-24 border-t border-zinc-800 bg-zinc-950"
+>
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+
+      <p class="uppercase tracking-[0.3em] text-blue-400 text-sm font-semibold">
+        Certifications
+      </p>
+
+      <h2 class="mt-4 text-4xl font-bold">
+        {certifications.title}
+      </h2>
+
+      <p class="mt-6 text-zinc-400 max-w-3xl mx-auto">
+        {certifications.description}
+      </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {
+        certifications.items.map((item) => (
+          <CertificationCard item={item} />
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
+```
