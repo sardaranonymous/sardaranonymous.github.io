@@ -1,0 +1,114 @@
+---
+import { bugBounty } from "../../data/bugbounty";
+import BugStat from "./BugStat.astro";
+---
+
+<section
+  id="bug-bounty"
+  class="py-28 border-t border-zinc-800 bg-zinc-950"
+>
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="max-w-3xl">
+
+      <p
+        class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
+      >
+        Security Research
+      </p>
+
+      <h2
+        class="mt-4 text-4xl md:text-5xl font-bold font-['Space_Grotesk']"
+      >
+        {bugBounty.title}
+      </h2>
+
+      <p
+        class="mt-8 text-zinc-400 text-lg leading-9"
+      >
+        {bugBounty.description}
+      </p>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-16">
+
+      {
+        bugBounty.stats.map((stat) => (
+
+          <BugStat
+            number={stat.number}
+            label={stat.label}
+          />
+
+        ))
+      }
+
+    </div>
+
+    <!-- Platforms -->
+
+    <div class="mt-20">
+
+      <h3
+        class="text-2xl font-bold font-['Space_Grotesk'] mb-8"
+      >
+        Platforms
+      </h3>
+
+      <div class="flex flex-wrap gap-4">
+
+        {
+          bugBounty.platforms.map((platform) => (
+
+            <span
+              class="rounded-full border border-blue-500/30 bg-blue-600/10 px-5 py-2 text-blue-300"
+            >
+              {platform}
+            </span>
+
+          ))
+        }
+
+      </div>
+
+    </div>
+
+    <!-- Methodology -->
+
+    <div class="mt-20">
+
+      <h3
+        class="text-2xl font-bold font-['Space_Grotesk'] mb-8"
+      >
+        Research Methodology
+      </h3>
+
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+
+        {
+          bugBounty.methodology.map((step) => (
+
+            <div
+              class="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 hover:border-blue-500 transition-all"
+            >
+
+              <p class="text-zinc-300">
+                {step}
+              </p>
+
+            </div>
+
+          ))
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
