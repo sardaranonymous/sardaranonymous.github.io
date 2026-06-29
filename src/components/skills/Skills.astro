@@ -1,0 +1,60 @@
+---
+import { skillCategories } from "../../data/skills";
+import SkillCategory from "./SkillCategory.astro";
+---
+
+<section
+  id="skills"
+  class="py-28 border-t border-zinc-800 bg-zinc-950"
+>
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+
+    <div class="max-w-3xl">
+
+      <p
+        class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
+      >
+        Technical Expertise
+      </p>
+
+      <h2
+        class="mt-4 text-4xl md:text-5xl font-bold font-['Space_Grotesk']"
+      >
+        Skills & Technologies
+      </h2>
+
+      <p
+        class="mt-8 text-zinc-400 text-lg leading-9"
+      >
+        Professional capabilities developed through certifications,
+        penetration testing, security research and bug bounty hunting.
+      </p>
+
+    </div>
+
+    <!-- Skills Grid -->
+
+    <div
+      class="grid gap-8 lg:grid-cols-2 mt-16"
+    >
+
+      {
+        skillCategories.map((category) => (
+
+          <SkillCategory
+            title={category.title}
+            icon={category.icon}
+            skills={category.skills}
+          />
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
