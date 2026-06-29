@@ -1,0 +1,37 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Navbar from "../components/layout/Navbar.astro";
+import Footer from "../components/layout/Footer.astro";
+
+import Hero from "../components/hero/Hero.astro";
+import About from "../components/about/About.astro";
+import Skills from "../components/skills/Skills.astro";
+import Projects from "../components/projects/Projects.astro";
+import BugBounty from "../components/bugbounty/BugBounty.astro";
+---
+
+<MainLayout
+  title="Sardar Anonymous | Web Application Penetration Tester"
+  description="Professional Web Application Penetration Tester, Bug Bounty Hunter and Security Researcher."
+>
+
+  <Navbar />
+
+  <main>
+
+    <Hero />
+
+    <About />
+
+    <Skills />
+
+    <Projects />
+
+    <BugBounty />
+
+  </main>
+
+  <Footer />
+
+</MainLayout>
