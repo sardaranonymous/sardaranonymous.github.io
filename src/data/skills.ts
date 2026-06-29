@@ -20,6 +20,9 @@ export const skillCategories = [
       "HackerOne",
       "Bugcrowd",
       "Intigriti",
+      "YesWeHack",
+      "PKCERT",
+      "Bug Bounty Switzerland",
       "Responsible Disclosure",
       "Security Research",
       "Report Writing",
@@ -33,23 +36,12 @@ export const skillCategories = [
       "Burp Suite",
       "Nmap",
       "Metasploit",
-      "Gobuster",
-      "Nikto",
-      "theHarvester",
       "ffuf",
-    ],
-  },
-
-  {
-    title: "Development",
-    icon: "💻",
-    skills: [
-      "Python",
-      "JavaScript",
-      "Git",
-      "GitHub",
-      "Astro",
-      "Linux",
+      "Wpscan",
+      "Subfinder",
+      "Amass",
+      "Nuclei",
+      "XSStrike"
     ],
   },
 ];

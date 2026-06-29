@@ -2,24 +2,24 @@ export const bugBounty = {
   title: "Bug Bounty Journey",
 
   description:
-    "My journey as an independent security researcher focused on discovering, validating and responsibly disclosing security vulnerabilities.",
+    "My journey as an independent security researcher focused on identifying, validating, and responsibly disclosing security vulnerabilities across public and private vulnerability disclosure programs.",
 
   stats: [
     {
-      number: "100+",
-      label: "Hours of Research",
-    },
-    {
-      number: "4",
-      label: "Bug Bounty Platforms",
-    },
-    {
-      number: "1",
-      label: "Microsoft Hall of Fame",
-    },
-    {
-      number: "200 CHF",
+      number: "400$",
       label: "Highest Public Bounty",
+    },
+    {
+      number: "6+",
+      label: "Security Programs Recognized",
+    },
+    {
+      number: "4+",
+      label: "Active Bug Bounty Platforms",
+    },
+    {
+      number: "Multiples",
+      label: "Hall of Fame Recognition",
     },
   ],
 
@@ -27,18 +27,29 @@ export const bugBounty = {
     "HackerOne",
     "Bugcrowd",
     "Intigriti",
+    "YesWeHack",
     "PKCERT",
+    "Bug Bounty Switzerland",
   ],
 
   methodology: [
     "Reconnaissance",
     "Attack Surface Mapping",
-    "Manual Testing",
-    "Business Logic Testing",
+    "Manual Security Testing",
+    "Business Logic Analysis",
     "API Security Testing",
-    "Authentication Testing",
-    "Authorization Testing",
+    "Authentication & Authorization Testing",
     "Proof of Concept Development",
-    "Responsible Disclosure",
+    "Impact Validation",
+    "Responsible Vulnerability Disclosure",
+  ],
+
+  recognitions: [
+    "Microsoft Hall of Fame",
+    "NASA Vulnerability Disclosure Program",
+    "WebPros Security Program",
+    "Lululemon Security Program",
+    "CodeSignal Vulnerability Disclosure",
+    "Pair Networks Security Program",
   ],
 };
