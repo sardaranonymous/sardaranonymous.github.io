@@ -1,0 +1,53 @@
+---
+interface Props {
+  company: string;
+  date: string;
+  image: string;
+  description: string;
+  link: string;
+}
+
+const { company, date, image, description, link } = Astro.props;
+---
+
+<article
+  class="group rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden hover:border-blue-500 transition-all duration-300 hover:-translate-y-2"
+>
+
+  <img
+    src={image}
+    alt={company}
+    class="w-full h-52 object-cover"
+  />
+
+  <div class="p-6">
+
+    <div class="flex items-center justify-between mb-3">
+
+      <h3 class="text-2xl font-bold">
+        {company}
+      </h3>
+
+      <span
+        class="text-xs bg-blue-600 px-3 py-1 rounded-full"
+      >
+        {date}
+      </span>
+
+    </div>
+
+    <p class="text-zinc-400 leading-7">
+      {description}
+    </p>
+
+    <a
+      href={link}
+      target="_blank"
+      class="inline-flex mt-6 text-blue-400 hover:text-blue-300"
+    >
+      View Recognition →
+    </a>
+
+  </div>
+
+</article>
