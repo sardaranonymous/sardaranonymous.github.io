@@ -1,0 +1,57 @@
+---
+import { projects } from "../../data/projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section
+  id="projects"
+  class="py-28 border-t border-zinc-800 bg-zinc-950"
+>
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Section Heading -->
+
+    <div class="max-w-3xl">
+
+      <p
+        class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
+      >
+        Portfolio
+      </p>
+
+      <h2
+        class="mt-4 text-4xl md:text-5xl font-bold font-['Space_Grotesk']"
+      >
+        Featured Projects
+      </h2>
+
+      <p
+        class="mt-8 text-zinc-400 text-lg leading-9"
+      >
+        A selection of security tools, automation projects and web applications
+        demonstrating my experience in penetration testing, bug bounty hunting
+        and software development.
+      </p>
+
+    </div>
+
+    <!-- Projects Grid -->
+
+    <div
+      class="grid gap-8 lg:grid-cols-2 mt-16"
+    >
+
+      {
+        projects.map((project) => (
+
+          <ProjectCard project={project} />
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
