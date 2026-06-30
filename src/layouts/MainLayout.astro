@@ -1,4 +1,5 @@
 ---
+import "glightbox/dist/css/glightbox.css";
 import "aos/dist/aos.css";
 import "../styles/global.css";
 
@@ -24,7 +25,9 @@ const {
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
   <head>
+
     <meta charset="UTF-8" />
 
     <meta
@@ -73,18 +76,28 @@ const {
       name="theme-color"
       content="#09090B"
     />
+
   </head>
 
   <body class="bg-zinc-950 text-white antialiased selection:bg-blue-600 selection:text-white">
 
-    <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,#1d4ed855,transparent_55%)]"></div>
+    <!-- Background Glow -->
+
+    <div
+      class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,#1d4ed855,transparent_55%)]"
+    ></div>
+
+    <!-- Page -->
 
     <div class="min-h-screen flex flex-col">
       <slot />
     </div>
 
+    <!-- AOS + GLightbox -->
+
     <script type="module">
       import AOS from "aos";
+      import GLightbox from "glightbox";
 
       AOS.init({
         duration: 800,
@@ -92,7 +105,17 @@ const {
         once: true,
         offset: 100,
       });
+
+      GLightbox({
+        selector: ".glightbox",
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+        openEffect: "zoom",
+        closeEffect: "fade",
+      });
     </script>
 
   </body>
+
 </html>

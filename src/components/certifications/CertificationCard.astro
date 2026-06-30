@@ -1,19 +1,46 @@
-```astro
 ---
 const { item } = Astro.props;
 ---
 
-<div class="rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-blue-500 transition">
+<div
+  class="group rounded-2xl border border-zinc-800 bg-zinc-900 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.20)]"
+>
 
-  <img
-    src={item.image}
-    alt={item.title}
-    class="h-44 w-full object-contain bg-zinc-950 p-6"
-  />
+  <!-- Certificate Image -->
 
-  <div class="p-6">
+  <div class="overflow-hidden bg-zinc-950">
 
-    <h3 class="text-xl font-semibold">
+    <a
+      href={item.image}
+      class="glightbox"
+      data-gallery="certifications"
+      data-title={item.title}
+      data-description={item.issuer}
+    >
+
+      <img
+        src={item.image}
+        alt={item.title}
+        class="h-44 w-full cursor-zoom-in object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+      />
+
+    </a>
+
+  </div>
+
+  <!-- Hint -->
+
+  <p class="py-2 text-center text-xs text-zinc-500">
+  
+  </p>
+
+  <!-- Content -->
+
+  <div class="p-6 pt-2">
+
+    <h3
+      class="text-xl font-semibold transition-colors duration-300 group-hover:text-blue-400"
+    >
       {item.title}
     </h3>
 
@@ -30,9 +57,26 @@ const { item } = Astro.props;
         <a
           href={item.verify}
           target="_blank"
-          class="mt-5 inline-flex rounded-lg bg-blue-600 px-4 py-2 hover:bg-blue-500 transition"
+          rel="noopener noreferrer"
+          class="mt-6 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 font-medium transition-all duration-300 hover:scale-105 hover:bg-blue-500"
         >
           Verify Certificate
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17 7l-10 10M8 7h9v9"
+            />
+          </svg>
+
         </a>
       )
     }
@@ -40,4 +84,3 @@ const { item } = Astro.props;
   </div>
 
 </div>
-```
