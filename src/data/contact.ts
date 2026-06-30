@@ -4,7 +4,7 @@ export const contact = {
   description:
     "Whether you're interested in responsible disclosure, bug bounty collaboration, penetration testing, or cybersecurity research, feel free to get in touch.",
 
-  email: "zabisardar64@gmail.com",
+  email: "sardaranonymous@wearehackerone.com",
 
   phone: "+92 313 4291431",
 
@@ -21,8 +21,8 @@ export const contact = {
   contacts: [
     {
       title: "Email",
-      value: "zabisardar64@gmail.com",
-      link: "mailto:zabisardar64@gmail.com",
+      value: "sardaranonymous@wearehackerone.com",
+      link: "mailto:sardaranonymous@wearehackerone.com",
     },
     {
       title: "Phone",
