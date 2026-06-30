@@ -12,7 +12,10 @@ import ProjectCard from "./ProjectCard.astro";
 
     <!-- Section Heading -->
 
-    <div class="max-w-3xl">
+    <div
+      class="max-w-3xl"
+      data-aos="fade-up"
+    >
 
       <p
         class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
@@ -43,9 +46,14 @@ import ProjectCard from "./ProjectCard.astro";
     >
 
       {
-        projects.map((project) => (
+        projects.map((project, index) => (
 
-          <ProjectCard project={project} />
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 150}
+          >
+            <ProjectCard project={project} />
+          </div>
 
         ))
       }

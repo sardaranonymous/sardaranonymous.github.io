@@ -1,4 +1,3 @@
-```astro
 ---
 import { certifications } from "../../data/certifications";
 import CertificationCard from "./CertificationCard.astro";
@@ -11,7 +10,9 @@ import CertificationCard from "./CertificationCard.astro";
 
   <div class="max-w-7xl mx-auto px-6">
 
-    <div class="text-center mb-14">
+    <!-- Heading -->
+
+    <div class="text-center mb-14" data-aos="fade-up">
 
       <p class="uppercase tracking-[0.3em] text-blue-400 text-sm font-semibold">
         Certifications
@@ -27,11 +28,18 @@ import CertificationCard from "./CertificationCard.astro";
 
     </div>
 
+    <!-- Grid -->
+
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
       {
-        certifications.items.map((item) => (
-          <CertificationCard item={item} />
+        certifications.items.map((item, index) => (
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay={index * 120}
+          >
+            <CertificationCard item={item} />
+          </div>
         ))
       }
 
@@ -40,4 +48,3 @@ import CertificationCard from "./CertificationCard.astro";
   </div>
 
 </section>
-```

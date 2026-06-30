@@ -10,7 +10,12 @@ import HallOfFameCard from "./HallOfFameCard.astro";
 
   <div class="max-w-7xl mx-auto px-6">
 
-    <div class="max-w-3xl">
+    <!-- Section Heading -->
+
+    <div
+      class="max-w-3xl"
+      data-aos="fade-up"
+    >
 
       <p class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold">
         Recognition
@@ -30,20 +35,29 @@ import HallOfFameCard from "./HallOfFameCard.astro";
 
     </div>
 
+    <!-- Hall of Fame Cards -->
+
     <div
       class="grid gap-8 mt-16 md:grid-cols-2 xl:grid-cols-3"
     >
 
       {
-        hallOfFame.recognitions.map((item) => (
+        hallOfFame.recognitions.map((item, index) => (
 
-          <HallOfFameCard
-            company={item.company}
-            date={item.date}
-            image={item.image}
-            description={item.description}
-            link={item.link}
-          />
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 120}
+          >
+
+            <HallOfFameCard
+              company={item.company}
+              date={item.date}
+              image={item.image}
+              description={item.description}
+              link={item.link}
+            />
+
+          </div>
 
         ))
       }
