@@ -8,25 +8,25 @@ const { title, description } = Astro.props;
 ---
 
 <div
-  class="group relative rounded-2xl transition-all duration-300"
+  class="group relative rounded-2xl transition-all duration-500"
 >
 
-  <!-- Blue Glow -->
+  <!-- Glow -->
 
   <div
-    class="absolute -inset-1 rounded-2xl bg-blue-500/20 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+    class="absolute -inset-1 rounded-2xl bg-blue-500/25 opacity-0 blur-xl transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
   ></div>
 
   <!-- Card -->
 
   <div
-    class="relative rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-md transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500"
+    class="relative rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-md transition-all duration-500 group-hover:-translate-y-3 group-hover:scale-[1.02] group-hover:border-blue-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.20)]"
   >
 
     <!-- Icon -->
 
     <div
-      class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600/20 text-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600/30"
+      class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600/20 text-2xl transition-all duration-700 group-hover:rotate-12 group-hover:scale-125 group-hover:bg-blue-600/30"
     >
       🛡️
     </div>
@@ -34,7 +34,7 @@ const { title, description } = Astro.props;
     <!-- Title -->
 
     <h4
-      class="mb-4 font-['Space_Grotesk'] text-xl font-semibold transition-colors duration-300 group-hover:text-blue-400"
+      class="mb-4 font-['Space_Grotesk'] text-xl font-semibold transition-all duration-500 group-hover:translate-x-1 group-hover:text-blue-400"
     >
       {title}
     </h4>
@@ -42,7 +42,7 @@ const { title, description } = Astro.props;
     <!-- Description -->
 
     <p
-      class="leading-7 text-zinc-400"
+      class="leading-7 text-zinc-400 transition-all duration-500 group-hover:translate-y-1 group-hover:text-zinc-300"
     >
       {description}
     </p>

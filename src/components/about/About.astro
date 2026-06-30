@@ -10,28 +10,32 @@ import SpecializationCard from "./SpecializationCard.astro";
 
 <section
   id="about"
-  class="relative py-28 border-t border-zinc-800 bg-zinc-950"
+  class="relative border-t border-zinc-800 bg-zinc-950 py-28"
 >
-  <div class="max-w-7xl mx-auto px-6">
+
+  <div class="mx-auto max-w-7xl px-6">
 
     <!-- Heading -->
 
-    <div class="max-w-3xl">
+    <div
+      class="max-w-3xl"
+      data-aos="fade-up"
+    >
 
       <p
-        class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
+        class="text-sm font-semibold uppercase tracking-[0.35em] text-blue-400"
       >
         About Me
       </p>
 
       <h2
-        class="mt-4 text-4xl md:text-5xl font-bold font-['Space_Grotesk']"
+        class="mt-4 font-['Space_Grotesk'] text-4xl font-bold md:text-5xl"
       >
         {about.title}
       </h2>
 
       <p
-        class="mt-8 text-zinc-400 text-lg leading-9 whitespace-pre-line"
+        class="mt-8 whitespace-pre-line text-lg leading-9 text-zinc-400"
       >
         {about.description}
       </p>
@@ -40,7 +44,11 @@ import SpecializationCard from "./SpecializationCard.astro";
 
     <!-- Highlights -->
 
-    <div class="mt-16">
+    <div
+      class="mt-16"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
 
       <AboutHighlights />
 
@@ -48,10 +56,14 @@ import SpecializationCard from "./SpecializationCard.astro";
 
     <!-- Specializations -->
 
-    <div class="mt-24">
+    <div
+      class="mt-24"
+      data-aos="fade-up"
+      data-aos-delay="150"
+    >
 
       <h3
-        class="text-3xl font-bold font-['Space_Grotesk'] mb-10"
+        class="mb-10 font-['Space_Grotesk'] text-3xl font-bold"
       >
         Specializations
       </h3>
@@ -61,12 +73,19 @@ import SpecializationCard from "./SpecializationCard.astro";
       >
 
         {
-          specializations.map((item) => (
+          specializations.map((item, index) => (
 
-            <SpecializationCard
-              title={item.title}
-              description={item.description}
-            />
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 120}
+            >
+
+              <SpecializationCard
+                title={item.title}
+                description={item.description}
+              />
+
+            </div>
 
           ))
         }
@@ -77,10 +96,14 @@ import SpecializationCard from "./SpecializationCard.astro";
 
     <!-- Timeline -->
 
-    <div class="mt-24">
+    <div
+      class="mt-24"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
 
       <h3
-        class="text-3xl font-bold font-['Space_Grotesk'] mb-10"
+        class="mb-10 font-['Space_Grotesk'] text-3xl font-bold"
       >
         Professional Journey
       </h3>
@@ -90,4 +113,5 @@ import SpecializationCard from "./SpecializationCard.astro";
     </div>
 
   </div>
+
 </section>
