@@ -17,4 +17,9 @@ export const hero = {
     text: "Download Resume",
     href: "/resume.pdf",
   },
+
+  bugBountyButton: {
+    text: "Bug Bounty Profiles",
+    href: "#bug-bounty",
+  },
 };

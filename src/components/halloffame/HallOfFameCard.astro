@@ -11,42 +11,84 @@ const { company, date, image, description, link } = Astro.props;
 ---
 
 <article
-  class="group rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden hover:border-blue-500 transition-all duration-300 hover:-translate-y-2"
+  class="group relative rounded-2xl transition-all duration-300"
 >
 
-  <img
-    src={image}
-    alt={company}
-    class="w-full h-52 object-cover"
-  />
+  <!-- Blue Glow -->
 
-  <div class="p-6">
+  <div
+    class="absolute -inset-1 rounded-2xl bg-blue-500/20 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+  ></div>
 
-    <div class="flex items-center justify-between mb-3">
+  <!-- Card -->
 
-      <h3 class="text-2xl font-bold">
-        {company}
-      </h3>
+  <div
+    class="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500"
+  >
 
-      <span
-        class="text-xs bg-blue-600 px-3 py-1 rounded-full"
-      >
-        {date}
-      </span>
+    <!-- Image -->
+
+    <div class="overflow-hidden">
+
+      <img
+        src={image}
+        alt={company}
+        class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
 
     </div>
 
-    <p class="text-zinc-400 leading-7">
-      {description}
-    </p>
+    <!-- Content -->
 
-    <a
-      href={link}
-      target="_blank"
-      class="inline-flex mt-6 text-blue-400 hover:text-blue-300"
-    >
-      View Recognition →
-    </a>
+    <div class="p-6">
+
+      <div class="mb-4 flex items-center justify-between">
+
+        <h3
+          class="text-2xl font-bold transition-colors duration-300 group-hover:text-blue-400"
+        >
+          {company}
+        </h3>
+
+        <span
+          class="rounded-full bg-blue-600 px-3 py-1 text-xs font-medium"
+        >
+          {date}
+        </span>
+
+      </div>
+
+      <p class="leading-7 text-zinc-400">
+        {description}
+      </p>
+
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 font-medium transition-all duration-300 hover:scale-105 hover:bg-blue-500"
+      >
+
+        View Recognition
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17 7l-10 10M8 7h9v9"
+          />
+        </svg>
+
+      </a>
+
+    </div>
 
   </div>
 

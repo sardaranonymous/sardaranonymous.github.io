@@ -10,7 +10,12 @@ import BugStat from "./BugStat.astro";
 
   <div class="max-w-7xl mx-auto px-6">
 
-    <div class="max-w-3xl">
+    <!-- Heading -->
+
+    <div
+      class="max-w-3xl"
+      data-aos="fade-up"
+    >
 
       <p
         class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
@@ -37,12 +42,19 @@ import BugStat from "./BugStat.astro";
     <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-16">
 
       {
-        bugBounty.stats.map((stat) => (
+        bugBounty.stats.map((stat, index) => (
 
-          <BugStat
-            number={stat.number}
-            label={stat.label}
-          />
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay={index * 120}
+          >
+
+            <BugStat
+              number={stat.number}
+              label={stat.label}
+            />
+
+          </div>
 
         ))
       }
@@ -51,7 +63,11 @@ import BugStat from "./BugStat.astro";
 
     <!-- Platforms -->
 
-    <div class="mt-20">
+    <div
+      class="mt-20"
+      data-aos="fade-up"
+      data-aos-delay="150"
+    >
 
       <h3
         class="text-2xl font-bold font-['Space_Grotesk'] mb-8"
@@ -62,10 +78,12 @@ import BugStat from "./BugStat.astro";
       <div class="flex flex-wrap gap-4">
 
         {
-          bugBounty.platforms.map((platform) => (
+          bugBounty.platforms.map((platform, index) => (
 
             <span
-              class="rounded-full border border-blue-500/30 bg-blue-600/10 px-5 py-2 text-blue-300"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+              class="cursor-default rounded-full border border-blue-500/30 bg-blue-600/10 px-5 py-2 text-blue-300 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-500/20 hover:shadow-lg hover:shadow-blue-500/20"
             >
               {platform}
             </span>
@@ -79,7 +97,10 @@ import BugStat from "./BugStat.astro";
 
     <!-- Methodology -->
 
-    <div class="mt-20">
+    <div
+      class="mt-20"
+      data-aos="fade-up"
+    >
 
       <h3
         class="text-2xl font-bold font-['Space_Grotesk'] mb-8"
@@ -90,10 +111,12 @@ import BugStat from "./BugStat.astro";
       <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
 
         {
-          bugBounty.methodology.map((step) => (
+          bugBounty.methodology.map((step, index) => (
 
             <div
-              class="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 hover:border-blue-500 transition-all"
+              data-aos="fade-up"
+              data-aos-delay={index * 120}
+              class="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
             >
 
               <p class="text-zinc-300">
