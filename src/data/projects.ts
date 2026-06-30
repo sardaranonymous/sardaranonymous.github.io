@@ -14,9 +14,7 @@ export const projects = [
       "Cyber Security",
     ],
 
-    github: "https://github.com/SardarWithDoubleSlit",
-
-    demo: "#",
+    github: "https://github.com/sardaranonymous/MontyBot",
 
     status: "Active",
   },
@@ -36,9 +34,7 @@ export const projects = [
       "SEO",
     ],
 
-    github: "https://github.com/sardaranonymous",
-
-    demo: "#",
+    github: "https://github.com/sardaranonymous/sardaranonymous.github.io",
 
     status: "Active",
   },
