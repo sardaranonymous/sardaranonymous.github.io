@@ -22,6 +22,14 @@ export const hallOfFame = {
       link: "#",
     },
     {
+      company: "Bentley Motors",
+      date: "2026",
+      image: "/assets/halloffame/bentley.png",
+      description:
+        "Responsible disclosure submitted through Bentley Motors VDP & got LinkedIn Acknowledgement.",
+      link: "https://www.linkedin.com/in/sardar-zabi-379ba3303/",
+    },
+    {
       company: "Lululemon",
       date: "2025",
       image: "/assets/halloffame/lululemon.png",
