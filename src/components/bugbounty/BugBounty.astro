@@ -39,7 +39,7 @@ import BugStat from "./BugStat.astro";
 
     <!-- Statistics -->
 
-    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-16">
+    <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
       {
         bugBounty.stats.map((stat, index) => (
@@ -70,7 +70,7 @@ import BugStat from "./BugStat.astro";
     >
 
       <h3
-        class="text-2xl font-bold font-['Space_Grotesk'] mb-8"
+        class="mb-8 font-['Space_Grotesk'] text-2xl font-bold"
       >
         Platforms
       </h3>
@@ -103,7 +103,7 @@ import BugStat from "./BugStat.astro";
     >
 
       <h3
-        class="text-2xl font-bold font-['Space_Grotesk'] mb-8"
+        class="mb-8 font-['Space_Grotesk'] text-2xl font-bold"
       >
         Research Methodology
       </h3>
@@ -116,12 +116,28 @@ import BugStat from "./BugStat.astro";
             <div
               data-aos="fade-up"
               data-aos-delay={index * 120}
-              class="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
+              class="group relative rounded-xl"
             >
 
-              <p class="text-zinc-300">
-                {step}
-              </p>
+              <!-- Blue Glow -->
+
+              <div
+                class="absolute -inset-1 rounded-xl bg-blue-500/25 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+              ></div>
+
+              <!-- Card -->
+
+              <div
+                class="relative rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-blue-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.20)]"
+              >
+
+                <p
+                  class="text-zinc-300 transition-colors duration-300 group-hover:text-white"
+                >
+                  {step}
+                </p>
+
+              </div>
 
             </div>
 

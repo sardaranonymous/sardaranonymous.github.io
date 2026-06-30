@@ -2,18 +2,46 @@
 const { service } = Astro.props;
 ---
 
-<div class="rounded-xl border border-zinc-800 bg-zinc-900 p-6 hover:border-blue-500 transition duration-300">
+<div
+  class="group relative rounded-2xl transition-all duration-300"
+>
 
-  <div class="text-4xl">
-    {service.icon}
+  <!-- Blue Glow -->
+
+  <div
+    class="absolute -inset-1 rounded-2xl bg-blue-500/20 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+  ></div>
+
+  <!-- Card -->
+
+  <div
+    class="relative rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.20)]"
+  >
+
+    <!-- Icon -->
+
+    <div
+      class="text-4xl transition-all duration-300 group-hover:scale-110"
+    >
+      {service.icon}
+    </div>
+
+    <!-- Title -->
+
+    <h3
+      class="mt-5 text-xl font-semibold transition-colors duration-300 group-hover:text-blue-400"
+    >
+      {service.title}
+    </h3>
+
+    <!-- Description -->
+
+    <p
+      class="mt-4 leading-relaxed text-zinc-400 transition-colors duration-300 group-hover:text-zinc-300"
+    >
+      {service.description}
+    </p>
+
   </div>
-
-  <h3 class="mt-5 text-xl font-semibold">
-    {service.title}
-  </h3>
-
-  <p class="mt-4 text-zinc-400 leading-relaxed">
-    {service.description}
-  </p>
 
 </div>

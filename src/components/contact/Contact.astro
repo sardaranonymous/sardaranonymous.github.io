@@ -2,10 +2,20 @@
 import { contact } from "../../data/contact";
 ---
 
-<section id="contact" class="py-24 border-t border-zinc-800 bg-zinc-950">
+<section
+  id="contact"
+  class="py-24 border-t border-zinc-800 bg-zinc-950"
+>
+
   <div class="max-w-5xl mx-auto px-6">
 
-    <div class="text-center mb-14">
+    <!-- Heading -->
+
+    <div
+      class="text-center mb-14"
+      data-aos="fade-up"
+    >
+
       <p class="uppercase tracking-[0.3em] text-blue-400 text-sm font-semibold">
         Contact
       </p>
@@ -14,31 +24,83 @@ import { contact } from "../../data/contact";
         {contact.title}
       </h2>
 
-      <p class="mt-6 text-zinc-400 max-w-2xl mx-auto">
+      <p class="mt-6 max-w-2xl mx-auto text-zinc-400">
         {contact.description}
       </p>
+
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
+    <!-- Contact Cards -->
+
+    <div class="grid gap-6 md:grid-cols-2">
 
       {
-        contact.contacts.map((item) => (
+        contact.contacts.map((item, index) => (
 
-          <a
-            href={item.link}
-            target="_blank"
-            class="rounded-xl border border-zinc-800 bg-zinc-900 p-6 hover:border-blue-500 transition"
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay={index * 120}
           >
 
-            <h3 class="text-xl font-semibold">
-              {item.title}
-            </h3>
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative block rounded-2xl transition-all duration-300"
+            >
 
-            <p class="mt-3 text-zinc-400 break-all">
-              {item.value}
-            </p>
+              <!-- Blue Glow -->
 
-          </a>
+              <div
+                class="absolute -inset-1 rounded-2xl bg-blue-500/20 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+              ></div>
+
+              <!-- Card -->
+
+              <div
+                class="relative rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500"
+              >
+
+                <h3
+                  class="text-xl font-semibold transition-colors duration-300 group-hover:text-blue-400"
+                >
+                  {item.title}
+                </h3>
+
+                <p
+                  class="mt-3 break-all text-zinc-400"
+                >
+                  {item.value}
+                </p>
+
+                <div
+                  class="mt-6 inline-flex items-center gap-2 text-blue-400 font-medium"
+                >
+
+                  Open
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17 7l-10 10M8 7h9v9"
+                    />
+                  </svg>
+
+                </div>
+
+              </div>
+
+            </a>
+
+          </div>
 
         ))
       }
@@ -46,4 +108,5 @@ import { contact } from "../../data/contact";
     </div>
 
   </div>
+
 </section>
