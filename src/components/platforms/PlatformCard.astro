@@ -1,0 +1,42 @@
+---
+const { platform } = Astro.props;
+---
+
+<div class="rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden hover:border-blue-500 transition duration-300">
+
+  <div class="flex items-center gap-5 p-6">
+
+    <img
+      src={platform.logo}
+      alt={platform.name}
+      class="w-14 h-14 object-contain"
+    />
+
+    <div>
+
+      <h3 class="text-xl font-semibold">
+        {platform.name}
+      </h3>
+
+      <p class="text-zinc-400">
+        {platform.username}
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="px-6 pb-6">
+
+    <a
+      href={platform.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex rounded-lg bg-blue-600 px-5 py-2.5 hover:bg-blue-500 transition"
+    >
+      Visit Profile →
+    </a>
+
+  </div>
+
+</div>
