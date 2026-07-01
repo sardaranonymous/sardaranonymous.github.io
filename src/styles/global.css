@@ -11,5 +11,5 @@ body {
 /* Prevent sticky navbar from covering section headings */
 
 section[id] {
-  scroll-margin-top: 7rem;
+  scroll-margin-top: 5rem;
 }
