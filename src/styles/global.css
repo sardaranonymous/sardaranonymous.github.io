@@ -7,3 +7,9 @@ html {
 body {
   margin: 0;
 }
+
+/* Prevent sticky navbar from covering section headings */
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
