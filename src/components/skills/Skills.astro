@@ -12,7 +12,10 @@ import SkillCategory from "./SkillCategory.astro";
 
     <!-- Heading -->
 
-    <div class="max-w-3xl">
+    <div
+      class="max-w-3xl"
+      data-aos="fade-up"
+    >
 
       <p
         class="uppercase tracking-[0.35em] text-blue-400 text-sm font-semibold"
@@ -42,13 +45,20 @@ import SkillCategory from "./SkillCategory.astro";
     >
 
       {
-        skillCategories.map((category) => (
+        skillCategories.map((category, index) => (
 
-          <SkillCategory
-            title={category.title}
-            icon={category.icon}
-            skills={category.skills}
-          />
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay={index * 150}
+          >
+
+            <SkillCategory
+              title={category.title}
+              icon={category.icon}
+              skills={category.skills}
+            />
+
+          </div>
 
         ))
       }

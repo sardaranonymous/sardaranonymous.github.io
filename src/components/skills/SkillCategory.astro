@@ -11,19 +11,19 @@ const { title, icon, skills } = Astro.props;
 ---
 
 <div
-  class="group relative rounded-2xl transition-all duration-300"
+  class="group relative rounded-2xl transition-all duration-500"
 >
 
   <!-- Blue Glow -->
 
   <div
-    class="absolute -inset-1 rounded-2xl bg-blue-500/20 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+    class="absolute -inset-1 rounded-2xl bg-blue-500/25 opacity-0 blur-xl transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
   ></div>
 
   <!-- Card -->
 
   <div
-    class="relative rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-md transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.20)]"
+    class="relative rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-md transition-all duration-500 group-hover:-translate-y-3 group-hover:scale-[1.02] group-hover:border-blue-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.20)]"
   >
 
     <!-- Header -->
@@ -33,7 +33,7 @@ const { title, icon, skills } = Astro.props;
       <!-- Icon -->
 
       <div
-        class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600/20 text-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600/30"
+        class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600/20 text-2xl transition-all duration-500 group-hover:rotate-6 group-hover:scale-125 group-hover:bg-blue-600/30"
       >
         {icon}
       </div>
@@ -41,7 +41,7 @@ const { title, icon, skills } = Astro.props;
       <!-- Title -->
 
       <h3
-        class="font-['Space_Grotesk'] text-2xl font-bold transition-colors duration-300 group-hover:text-blue-400"
+        class="font-['Space_Grotesk'] text-2xl font-bold transition-all duration-300 group-hover:text-blue-400 group-hover:translate-x-1"
       >
         {title}
       </h3>
@@ -50,7 +50,9 @@ const { title, icon, skills } = Astro.props;
 
     <!-- Skills -->
 
-    <div class="grid gap-3">
+    <div
+      class="grid gap-3 transition-all duration-300 group-hover:opacity-95"
+    >
 
       {
         skills.map((skill) => (
