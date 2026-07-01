@@ -8,8 +8,24 @@ body {
   margin: 0;
 }
 
-/* Prevent sticky navbar from covering section headings */
+/* Mobile */
 
 section[id] {
-  scroll-margin-top: 39rem;
+  scroll-margin-top: 39px;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+/* Large Desktop */
+
+@media (min-width: 1024px) {
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
 }
